@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transformar Properties</title>
+    <link rel="stylesheet" type="text/css" href="page.css">
+  </head>
+  <body>
+    <div>
+      <ul>
+        <p>ENTRADA</p>
+        <textarea id="input" rows="8" cols="50" placeholder="digite o texto a ser formatado ou arraste um arquivo (.txt) nesta caixa"></textarea>
+      </ul>
+      <ul>
+        <button type="submit" id="refactor-btn" class="btn">M O R F A R</button>
+      </ul>
+    </div>
+    <div id="wrapper">
+      <div id="inline">
+        <ul>
+          <p>SAÍDA</p>
+          <textarea id="output" rows="8" cols="50" readonly></textarea>
+        </ul>
+      </div>
+      <div id="inline" class="complete">
+        <ul>
+          <label id="labelText" for="cb">COMPLETAR COM</span></label>
+          <br>
+          <button id="add">+</button>
+          <br>
+          <textarea style="display: none" class="hidden" id="completeField" rows="1" cols="30" placeholder="ex: D:\DNK\URA\Frases"></textarea>
+          <button style="display: none" class="hidden" id="submit">OK</button>
+          <button style="display: none" class="hidden" id="reject">X</button>
+        </ul> 
+      </div>
+    </di v> 
+    <script type="text/javascript" src='read.js'></script>
+  </body>
+
+</html>

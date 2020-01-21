@@ -1,0 +1,76 @@
+html {
+  appearance: none;
+}
+
+p {
+  color: white;
+  margin-bottom: 2px;
+}
+
+#inline {
+  display: inline-block;
+}
+
+body {
+ /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+ /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%); */
+ background: linear-gradient(90deg, rgb(15, 58, 107) 0%, rgb(32, 125, 125) 100%);
+}
+
+textarea {
+  background-color: rgb(255, 250, 236);
+  border-radius: 10px;
+  padding: none;
+  resize: none;
+}
+
+#completeField {
+  background-color: rgb(255, 250, 236);
+  padding: none;
+  resize: none;
+}
+
+h4, #labelText {
+  color: rgb(224, 227, 230);
+  margin-bottom: 2px;
+}
+
+button#refactor-btn {
+  background-color: rgb(230, 159, 91);
+  border: none;
+  border-radius: 25px;
+  padding: 16px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.5s;
+}
+  
+button#refactor-btn:hover {
+  background-color: rgb(255, 148, 0);
+}
+
+button#refactor-btn:active {
+  transform: translateY(8px);
+}
+
+button#refactor-btn:focus, .intext:focus {
+  outline: 0;
+}
+
+#wrapper {
+  display: flex;
+}
+
+div.complete {
+  padding-top: 50px;
+}
+
+button#add {
+  margin-left: 60px;
+  margin-bottom: 5px;
+  background-color: rgb(230, 159, 91);
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+}
