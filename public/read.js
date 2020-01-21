@@ -53,19 +53,18 @@ function textFilter(str) {
 function completeText(e) {
     let splited = outputZone.value.split('\n');
     for (v of splited) {
-        outputZone.innerHTML
-        splited[splited.indexOf(v)] += '<span class="red">' + e.value + '</span>';
+        splited[splited.indexOf(v)] += e.value;
     }
 
     outputZone.value = splited.join('\n');
 }
 
-function unHide(eCollection) {
+function unHide(eList) {
     for (i = 0; i < eCollection.length; i++) {
-        if (eCollection[i].style.display == 'none') {
-            eCollection[i].style.display = 'block';
+        if (eList[i].style.display == 'none') {
+            eList[i].style.display = 'block';
         } else {
-            eCollection[i].style.display = 'none';
+            eList[i].style.display = 'none';
         }
     }
 }
@@ -78,6 +77,7 @@ var btnAdd = document.querySelector('#add');
 var hidden = document.querySelectorAll('.hidden');
 var btnSubmit = document.querySelector('#submit');
 var completeField = document.querySelector('#completeField');
+var btnRedo = document.querySelector('#redo');
 
 dropAndInputZone.addEventListener('dragover', handleDragOver, false);
 dropAndInputZone.addEventListener('drop', handleFileSelect, false);
@@ -88,6 +88,15 @@ btnAdd.addEventListener('click', function() {
 
 btnSubmit.addEventListener('click', function() {
     completeText(completeField);
+    completeField.value = '';
+    unHide(btnRedo);
+    unHide(hidden);
+});
+
+btnRedo.addEventListener('click', function() {
+    unHide(hidden);
+    //let keepL = completeField.value.substr(0,test.indexOf(r));
+    //let keepR = completeField.value.substr(keepL.length + r.length,test.length);
 });
 
 btnElement.onclick = function() {    
